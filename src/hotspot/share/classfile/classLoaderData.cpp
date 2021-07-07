@@ -805,6 +805,7 @@ void ClassLoaderData::init_handle_locked(OopHandle& dest, Handle h) {
     return;
   } else {
     dest = _handles.add(h());
+    record_modified_oops();
   }
 }
 
